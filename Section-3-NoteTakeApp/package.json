@@ -1,0 +1,15 @@
+{
+  "name": "section-3-notetakeapp",
+  "version": "1.0.0",
+  "description": "Note Taking App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Büşra GÜL",
+  "license": "ISC",
+  "dependencies": {
+    "validate-npm-package-name": "^5.0.0",
+    "validator": "^13.9.0"
+  }
+}
