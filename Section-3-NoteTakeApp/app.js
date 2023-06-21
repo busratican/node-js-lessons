@@ -11,5 +11,5 @@ console.log(notes)
 
 console.log(validator.isEmail('andrewexample.com'))
 console.log(validator.isURL('andrewexample.m'))
-console.log(validate('excited!'))
+console.log(validate('excited'))
 
