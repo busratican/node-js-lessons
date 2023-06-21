@@ -1,15 +1,49 @@
 //load fs module
-const validator = require('validator')
-var validate = require("validate-npm-package-name")
+const chalk = require('chalk');
+const colorMessage = chalk.green('Hello')
+//console.log(colorMessage)
 
-const {add, getNotes} = require("./utils")
-const sum = add(2,3)
-console.log(sum)
-const notes = getNotes("Busra")
-console.log(notes)
+const yargs = require("yargs");
+const getNotes = require("./utils");
+ 
+yargs.version("1.1.0")
+//console.log(process.argv)
+
+//create add command
+yargs.command({
+    command: 'add',
+    describe: 'Add a new note',
+    handler: function(){
+        console.log('Adding a new note')
+    }
+})
+
+//create remove command
+yargs.command({
+    command: 'remove',
+    describe: 'Remove a note',
+    handler: function(){
+        console.log('Remove a note')
+    }
+})
+
+//create read command
+yargs.command({
+    command: 'read',
+    describe: 'Read a note',
+    handler: function(){
+        console.log('Read a note')
+    }
+})
+
+//create list command
+yargs.command({
+    command: 'list',
+    describe: 'List notes',
+    handler: function(){
+        console.log('List notes')
+    }
+})
 
 
-console.log(validator.isEmail('andrewexample.com'))
-console.log(validator.isURL('andrewexample.m'))
-console.log(validate('excited'))
-
+console.log(yargs.argv)
